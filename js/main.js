@@ -3,7 +3,7 @@
  * Simple vanilla JS for:
  *  1. Staff shift phone rotation (when ready)
  *  2. Live Ghana GMT open/closed status
- *  3. Mobile menu toggle
+ *  3. Mobile menu toggle (with outside-click, Escape, and resize handling)
  *  4. Current year in footer
  */
 
@@ -79,9 +79,9 @@ function renderOpenStatus() {
   const hoursStatus = document.getElementById('js-hours-status');
   if (hoursStatus) {
     if (isOpen) {
-      hoursStatus.textContent = `Open right now — closes at ${closesAt} today.`;
+      hoursStatus.textContent = `Open right now — closes at ${closesAt} today (Ghana time).`;
     } else {
-      hoursStatus.textContent = `Currently closed.`;
+      hoursStatus.textContent = `Currently closed. Regular hours: Mon–Sat 8:00 AM–9:00 PM, Sun 1:00 PM–9:00 PM.`;
     }
   }
 }
@@ -111,6 +111,11 @@ function renderActiveNumber() {
 
   document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
     link.href = activeHref;
+    if (link.classList.contains('header-cta')) {
+      link.textContent = `Call ${activeNumber}`;
+    } else if (link.classList.contains('hero-card__tel')) {
+      link.textContent = activeNumber;
+    }
   });
 }
 
@@ -121,6 +126,7 @@ function initMobileNav() {
 
   const setOpen = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     toggle.textContent = open ? 'Close' : 'Menu';
     nav.classList.toggle('is-open', open);
   };
@@ -138,6 +144,19 @@ function initMobileNav() {
     if (e.key === 'Escape' && nav.classList.contains('is-open')) {
       setOpen(false);
       toggle.focus();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    const header = document.querySelector('.site-header');
+    if (header && !header.contains(e.target) && nav.classList.contains('is-open')) {
+      setOpen(false);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 860 && nav.classList.contains('is-open')) {
+      setOpen(false);
     }
   });
 }
