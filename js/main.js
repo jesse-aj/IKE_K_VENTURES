@@ -1,17 +1,17 @@
 /**
  * IKE K VENTURES — main.js
- * Vanilla JavaScript:
- *  1. Shift rotation config (ready for multiple staff numbers)
- *  2. Live Ghana GMT+0 Open/Closed ledger status (without AI dot markers)
- *  3. Mobile MENU / CLOSE toggle
- *  4. Copyright year
+ * Simple vanilla JS for:
+ *  1. Staff shift phone rotation (when ready)
+ *  2. Live Ghana GMT open/closed status
+ *  3. Mobile menu toggle
+ *  4. Current year in footer
  */
 
 'use strict';
 
 const SHIFT_CONFIG = {
   /*
-   * When staff phone rotation is ready, uncomment and add shift numbers:
+   * To rotate staff phone numbers by time of day, uncomment and edit:
    * shifts: [
    *   { label: 'Morning',   startsAt: 8,  number: '+233 XX XXX XXXX', href: 'tel:+233XXXXXXXXXX' },
    *   { label: 'Afternoon', startsAt: 14, number: '+233 XX XXX XXXX', href: 'tel:+233XXXXXXXXXX' },
@@ -66,22 +66,22 @@ function getOpenStatus() {
 function renderOpenStatus() {
   const { isOpen, opensAt, closesAt, isSunday } = getOpenStatus();
 
-  const utilityStatus = document.getElementById('js-open-status');
-  if (utilityStatus) {
+  const heroStatus = document.getElementById('js-open-status');
+  if (heroStatus) {
     if (isOpen) {
-      utilityStatus.innerHTML = `<span class="ledger-bar__key">STATUS:</span> <span class="status-tag--open">[OPEN NOW — CLOSES ${closesAt} GMT]</span>`;
+      heroStatus.textContent = `Open Now (Closes ${closesAt}) · Opposite Apremdo Market, Takoradi`;
     } else {
-      const nextOpen = isSunday ? 'OPENS TODAY 1:00 PM' : `OPENS ${opensAt} GMT`;
-      utilityStatus.innerHTML = `<span class="ledger-bar__key">STATUS:</span> <span class="status-tag--closed">[CLOSED — ${nextOpen}]</span>`;
+      const nextOpen = isSunday ? 'Opens today at 1:00 PM' : `Opens ${opensAt}`;
+      heroStatus.textContent = `Currently Closed (${nextOpen}) · Opposite Apremdo Market, Takoradi`;
     }
   }
 
   const hoursStatus = document.getElementById('js-hours-status');
   if (hoursStatus) {
     if (isOpen) {
-      hoursStatus.textContent = `CURRENT STATUS: OPEN NOW (CLOSES AT ${closesAt} GHANA TIME)`;
+      hoursStatus.textContent = `Open right now — closes at ${closesAt} today.`;
     } else {
-      hoursStatus.textContent = `CURRENT STATUS: CLOSED right now. Regular hours: Mon–Sat 8 AM–9 PM, Sun 1 PM–9 PM.`;
+      hoursStatus.textContent = `Currently closed.`;
     }
   }
 }
@@ -119,12 +119,9 @@ function initMobileNav() {
   const nav    = document.getElementById('primary-nav');
   if (!toggle || !nav) return;
 
-  const labelEl = toggle.querySelector('.nav-toggle__label');
-
   const setOpen = (open) => {
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
-    if (labelEl) labelEl.textContent = open ? 'CLOSE' : 'MENU';
+    toggle.textContent = open ? 'Close' : 'Menu';
     nav.classList.toggle('is-open', open);
   };
 

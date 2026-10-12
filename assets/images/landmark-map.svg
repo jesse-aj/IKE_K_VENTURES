@@ -1,111 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460" role="img" aria-label="Architectural landmark diagram showing the 2BN Garrison Main Road, the branch onto Apremdo Road, a short walking distance down Apremdo Road, with Apremdo Market on the left and IKE K VENTURES directly opposite on the right.">
-  <title>IKE K VENTURES — Apremdo Road &amp; Market Landmark Map</title>
-  <desc>Technical wayfinding diagram: Branch off the 2BN Garrison Main Road onto Apremdo Road, walk a short distance down the road; Apremdo Market is on the left and IKE K VENTURES is directly opposite on the right.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 420" width="620" height="420" role="img" aria-label="Map showing 2BN Garrison Main Road, the turn onto Apremdo Road, a short walk down the road, with Apremdo Market on the left and IKE K VENTURES directly opposite on the right.">
+  <title>Directions to IKE K VENTURES</title>
+  <desc>Start on 2BN Garrison Main Road, branch onto Apremdo Road, walk a short distance down; Apremdo Market is on the left and IKE K VENTURES is directly opposite on the right.</desc>
 
   <defs>
-    <!-- Subtle architectural grid pattern -->
-    <pattern id="arch-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E2DDD1" stroke-width="0.75"/>
-    </pattern>
-    <marker id="arrow-ink" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#141A16"/>
+    <marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#0D9488"/>
     </marker>
-    <marker id="arrow-rust" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#9E3B1B"/>
+    <marker id="arrow-teal-rev" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M8,0 L0,4 L8,8 Z" fill="#0D9488"/>
     </marker>
-    <marker id="arrow-rust-rev" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto">
-      <path d="M8,0 L0,4 L8,8 Z" fill="#9E3B1B"/>
+    <marker id="arrow-navy" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#0F2C59"/>
     </marker>
   </defs>
 
-  <!-- Canvas Background -->
-  <rect width="640" height="460" fill="#F4F0E6"/>
-  <rect width="640" height="460" fill="url(#arch-grid)"/>
-
-  <!-- Top Technical Header Strip -->
-  <rect x="0" y="0" width="640" height="32" fill="#141A16"/>
-  <text x="16" y="20" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#F4F0E6" letter-spacing="0.12em">WAYFINDING DIAGRAM // APREMDO ROAD JUNCTION, TAKORADI</text>
-  <text x="624" y="20" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#A6B0A8" text-anchor="end" letter-spacing="0.08em">NOT TO SCALE</text>
+  <!-- Soft Cool Blue-Gray Background -->
+  <rect width="620" height="420" rx="8" fill="#F4F8FB"/>
 
   <!-- ====== 1. 2BN GARRISON (TOP LEFT) ====== -->
-  <rect x="28" y="48" width="190" height="58" fill="#E6E1D4" stroke="#141A16" stroke-width="1.5"/>
-  <line x1="28" y1="54" x2="218" y2="54" stroke="#141A16" stroke-width="0.75"/>
-  <text x="123" y="75" font-family="'IBM Plex Sans', sans-serif" font-size="12" font-weight="700" fill="#141A16" text-anchor="middle" letter-spacing="0.08em">2BN GARRISON</text>
-  <text x="123" y="92" font-family="'IBM Plex Mono', monospace" font-size="9.5" fill="#4A524C" text-anchor="middle">MILITARY BARRACKS AREA</text>
+  <rect x="32" y="24" width="180" height="54" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="122" y="49" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F2C59" text-anchor="middle">2BN Garrison</text>
+  <text x="122" y="66" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Main Road Landmark</text>
 
-  <!-- ====== 2. MAIN ROAD (HORIZONTAL) ====== -->
-  <!-- Road surface -->
-  <rect x="0" y="120" width="640" height="56" fill="#D5CFC0" stroke="#141A16" stroke-width="1.5"/>
-  <!-- Center divider line -->
-  <line x1="0" y1="148" x2="265" y2="148" stroke="#141A16" stroke-width="1" stroke-dasharray="12 8"/>
-  <line x1="365" y1="148" x2="640" y2="148" stroke="#141A16" stroke-width="1" stroke-dasharray="12 8"/>
+  <!-- ====== 2. 2BN GARRISON MAIN ROAD (HORIZONTAL) ====== -->
+  <rect x="0" y="96" width="620" height="52" fill="#DCE5EF"/>
+  <line x1="0" y1="122" x2="265" y2="122" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="12 8"/>
+  <line x1="355" y1="122" x2="620" y2="122" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="12 8"/>
 
-  <!-- Road Name Label -->
-  <rect x="420" y="135" width="196" height="26" fill="#F4F0E6" stroke="#141A16" stroke-width="1"/>
-  <text x="518" y="152" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#141A16" text-anchor="middle" letter-spacing="0.08em">2BN GARRISON MAIN ROAD</text>
+  <text x="480" y="126" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0F2C59" text-anchor="middle">2BN Garrison Main Road</text>
 
-  <!-- Traffic flow arrows on Main Road -->
-  <text x="48" y="142" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#4A524C" letter-spacing="0.06em">← FROM KWESIMINTSIM</text>
-  <text x="48" y="164" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#4A524C" letter-spacing="0.06em">TO TAKORADI TOWN →</text>
+  <!-- ====== 3. APREMDO ROAD (STRETCHED VERTICAL ROAD) ====== -->
+  <rect x="270" y="148" width="80" height="272" fill="#DCE5EF"/>
+  <line x1="310" y1="220" x2="310" y2="420" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="12 8"/>
 
-  <!-- ====== 3. APREMDO ROAD (STRETCHED VERTICAL CORRIDOR) ====== -->
-  <!-- Road surface stretching all the way from y=176 to y=460 -->
-  <rect x="275" y="175" width="80" height="285" fill="#D5CFC0"/>
-  <!-- Left & Right Kerb Borders -->
-  <line x1="275" y1="176" x2="275" y2="460" stroke="#141A16" stroke-width="1.5"/>
-  <line x1="355" y1="176" x2="355" y2="460" stroke="#141A16" stroke-width="1.5"/>
-  <!-- Cover the top border line at the junction so the road flows continuously -->
-  <rect x="276" y="170" width="78" height="10" fill="#D5CFC0"/>
+  <!-- Turning curve arrow from Main Road onto Apremdo Road -->
+  <path d="M 210 128 L 295 128 Q 310 128 310 145 L 310 245" fill="none" stroke="#0F2C59" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-navy)"/>
 
-  <!-- Junction turning curve arrow -->
-  <path d="M 215 156 L 300 156 Q 315 156 315 174 L 315 280" fill="none" stroke="#141A16" stroke-width="1.75" stroke-dasharray="4 3" marker-end="url(#arrow-ink)"/>
+  <!-- Walking distance note along upper Apremdo Road -->
+  <rect x="366" y="172" width="218" height="48" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="380" y="193" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0D9488">Short walk down Apremdo Rd</text>
+  <text x="380" y="210" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#64748B">Continue past the junction</text>
 
-  <!-- Walking distance callout along the upper stretch of Apremdo Road -->
-  <g transform="translate(370, 200)">
-    <line x1="-10" y1="0" x2="-10" y2="85" stroke="#141A16" stroke-width="1"/>
-    <line x1="-14" y1="0" x2="-6" y2="0" stroke="#141A16" stroke-width="1"/>
-    <line x1="-14" y1="85" x2="-6" y2="85" stroke="#141A16" stroke-width="1"/>
-    <rect x="0" y="18" width="235" height="48" fill="#F4F0E6" stroke="#141A16" stroke-width="1"/>
-    <text x="12" y="38" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#9E3B1B" letter-spacing="0.05em">WALK / DRIVE DOWN APREMDO RD</text>
-    <text x="12" y="54" font-family="'IBM Plex Sans', sans-serif" font-size="11" fill="#141A16">Short distance past the junction</text>
+  <text x="310" y="404" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Apremdo Road ↓</text>
+
+  <!-- ====== 4. APREMDO MARKET (LEFT SIDE) ====== -->
+  <g transform="translate(32, 275)">
+    <rect x="0" y="0" width="214" height="104" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <text x="107" y="44" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#0F2C59" text-anchor="middle">Apremdo Market</text>
+    <text x="107" y="64" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">On your left</text>
+    <text x="107" y="84" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#0D9488" text-anchor="middle">Market Entrance →</text>
   </g>
 
-  <!-- Apremdo Road Label vertical -->
-  <text x="315" y="438" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#141A16" text-anchor="middle" letter-spacing="0.1em">APREMDO ROAD ↓</text>
-
-  <!-- ====== 4. APREMDO MARKET (LEFT SIDE OF APREMDO ROAD) ====== -->
-  <g transform="translate(28, 305)">
-    <rect x="0" y="0" width="222" height="110" fill="#E6E1D4" stroke="#141A16" stroke-width="1.5"/>
-    <!-- Architectural hatching on top edge -->
-    <rect x="0" y="0" width="222" height="22" fill="#141A16"/>
-    <text x="12" y="15" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#F4F0E6" letter-spacing="0.1em">LANDMARK // LEFT SIDE</text>
-    <text x="111" y="54" font-family="'IBM Plex Sans', sans-serif" font-size="16" font-weight="700" fill="#141A16" text-anchor="middle" letter-spacing="0.06em">APREMDO MARKET</text>
-    <text x="111" y="74" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#4A524C" text-anchor="middle">MAIN MARKET GROUNDS</text>
-    <!-- Market gate indicator facing Apremdo Road -->
-    <rect x="216" y="42" width="8" height="36" fill="#9E3B1B"/>
-    <text x="208" y="98" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#9E3B1B" text-anchor="end">MARKET ENTRANCE →</text>
+  <!-- ====== 5. IKE K VENTURES (RIGHT SIDE — OPPOSITE MARKET) ====== -->
+  <g transform="translate(374, 275)">
+    <rect x="0" y="0" width="214" height="104" rx="6" fill="#0F2C59"/>
+    <rect x="52" y="14" width="110" height="20" rx="4" fill="#0D9488"/>
+    <text x="107" y="28" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.04em">OUR SHOP</text>
+    <text x="107" y="56" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">IKE K VENTURES</text>
+    <text x="107" y="76" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#CBD5E1" text-anchor="middle">OTC Medicine Seller</text>
+    <text x="107" y="92" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#5EEAD4" text-anchor="middle">← Directly opposite market</text>
   </g>
 
-  <!-- ====== 5. IKE K VENTURES (RIGHT SIDE — DIRECTLY OPPOSITE MARKET) ====== -->
-  <g transform="translate(380, 305)">
-    <!-- Drop shadow block for architectural depth -->
-    <rect x="5" y="5" width="232" height="110" fill="#141A16"/>
-    <!-- Main shop block -->
-    <rect x="0" y="0" width="232" height="110" fill="#123524" stroke="#141A16" stroke-width="1.5"/>
-    <!-- Top label strip -->
-    <rect x="0" y="0" width="232" height="24" fill="#9E3B1B"/>
-    <text x="12" y="16" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#F4F0E6" letter-spacing="0.1em">DESTINATION // RIGHT SIDE</text>
-
-    <text x="116" y="54" font-family="'IBM Plex Sans', sans-serif" font-size="16" font-weight="700" fill="#F4F0E6" text-anchor="middle" letter-spacing="0.06em">IKE K VENTURES</text>
-    <text x="116" y="73" font-family="'IBM Plex Mono', monospace" font-size="10" fill="#D5CFC0" text-anchor="middle" letter-spacing="0.05em">OTC MEDICINE COUNTER</text>
-    <text x="116" y="95" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#F4F0E6" text-anchor="middle">← FACING THE MARKET</text>
-  </g>
-
-  <!-- ====== 6. DIRECTLY OPPOSITE CONNECTOR ACROSS APREMDO ROAD ====== -->
-  <line x1="256" y1="360" x2="374" y2="360" stroke="#9E3B1B" stroke-width="2" marker-start="url(#arrow-rust-rev)" marker-end="url(#arrow-rust)"/>
-  <rect x="267" y="342" width="96" height="16" fill="#F4F0E6" stroke="#9E3B1B" stroke-width="1"/>
-  <text x="315" y="353" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="700" fill="#9E3B1B" text-anchor="middle" letter-spacing="0.06em">OPPOSITE</text>
-
-  <!-- Outer Technical Frame -->
-  <rect x="0.75" y="0.75" width="638.5" height="458.5" fill="none" stroke="#141A16" stroke-width="1.5"/>
+  <!-- ====== 6. OPPOSITE CONNECTOR ====== -->
+  <line x1="254" y1="327" x2="366" y2="327" stroke="#0D9488" stroke-width="2" stroke-dasharray="4 3" marker-start="url(#arrow-teal-rev)" marker-end="url(#arrow-teal)"/>
 </svg>
